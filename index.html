@@ -141,6 +141,40 @@
             margin: 0.25rem 0.25rem 0 0;
         }
 
+        /* Certificate Gallery Grid Styling */
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 1.5rem;
+        }
+        
+        .certificate-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .certificate-card h4 {
+            margin: 0 0 1rem 0;
+            color: #1e293b;
+        }
+        
+        .certificate-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            border: 1px solid #cbd5e1;
+            transition: transform 0.2s;
+        }
+        
+        .certificate-card img:hover {
+            transform: scale(1.02);
+        }
+
         /* Responsive */
         @media (max-width: 900px) {
             body { flex-direction: column; }
@@ -160,7 +194,7 @@
 
     <!-- Sidebar / Profile -->
     <aside class="sidebar">
-        <!-- The image source has been updated to your provided link -->
+        <!-- Profile image using the web link provided -->
         <img src="https://postimage.me/image/h601s" alt="Gajjala Sandeep" class="profile-img">
         <h1>Gajjala Sandeep</h1>
         <h2>Web Developer Intern</h2>
@@ -237,7 +271,15 @@
         <!-- Education -->
         <section id="education">
             <h2 class="section-title">Education</h2>
-            
+            <div class="card">
+                <h3>Current Higher Education</h3>
+                <div class="meta">
+                    <span>Degree details in progress</span>
+                </div>
+                <ul>
+                    <li><strong>CGPA:</strong> 6.5</li>
+                </ul>
+            </div>
             <div class="card">
                 <h3>Intermediate (Class 12)</h3>
                 <div class="meta">
@@ -264,18 +306,37 @@
             </div>
         </section>
 
-        <!-- Certifications -->
-        <section id="certifications">
-            <h2 class="section-title">Certifications & Achievements</h2>
-            <div class="card">
-                <h3>Certificate of Participation</h3>
-                <div class="meta">
-                    <span>Ministry of Youth Affairs & Sports (MYBharat)</span>
-                    <span>Dec 2025</span>
+        <!-- Certificates & Documents Gallery -->
+        <section id="certificates-gallery">
+            <h2 class="section-title">Certificates & Documents</h2>
+            <p>Visual gallery of my verified academic marks and professional certifications.</p>
+            
+            <div class="certificate-grid">
+                
+                <div class="certificate-card">
+                    <h4>Thiranex Internship Certificate</h4>
+                    <!-- Link this to the internship image in your folder -->
+                    <img src="internship-cert.jpg" alt="Web Development Internship Certificate">
                 </div>
-                <ul>
-                    <li>Received a Certificate of Participation for the Online Quiz on "Know more about DFPD".</li>
-                </ul>
+
+                <div class="certificate-card">
+                    <h4>MYBharat Participation Certificate</h4>
+                    <!-- Link this to the MYBharat image in your folder -->
+                    <img src="mybharat-cert.jpg" alt="MYBharat Online Quiz Certificate">
+                </div>
+
+                <div class="certificate-card">
+                    <h4>Intermediate (Class 12) Memo</h4>
+                    <!-- Link this to the 12th marks image in your folder -->
+                    <img src="12th-memo.jpg" alt="Class 12 Marks Memo">
+                </div>
+
+                <div class="certificate-card">
+                    <h4>SSC (Class 10) Certificate</h4>
+                    <!-- Link this to the 10th marks image in your folder -->
+                    <img src="10th-memo.jpg" alt="Class 10 Marks Memo">
+                </div>
+
             </div>
         </section>
 
